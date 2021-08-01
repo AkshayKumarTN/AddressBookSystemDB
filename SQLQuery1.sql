@@ -28,5 +28,7 @@ update Address_Book_Table set PhoneNumber=7845712874 where FirstName='Sam';
 
 delete from Address_Book_Table where FirstName='Sam' and SecondName='M';
 
+---------UC6---->Retrieve data belongs to state or city---------
 
+Select * from Address_Book_Table where City='Chennai' or State='TamilNadu';
 
