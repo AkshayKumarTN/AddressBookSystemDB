@@ -38,3 +38,11 @@ Select Count(*) As Count,State,City from Address_Book_Table group by State,City;
 ---------UC8---->Sort the name alphabetically using city name--------
 
 select * from Address_Book_Table where City='Chennai' order by FirstName;
+
+----------UC9---->Add the new columns and adding the address book name and type-----------
+alter table Address_Book_Table
+add AddressBookName varchar(50),RelationType varchar(50);
+
+update Address_Book_Table set AddressBookName='Friends',RelationType='Friend' where FirstName='Arun' ;
+
+update Address_Book_Table set AddressBookName ='Cousin',RelationType ='Family' where zip=600066;
