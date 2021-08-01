@@ -16,6 +16,12 @@ Email varchar(200)
 
 ------ UC 3->Insert Values to Table ------
 Insert into Address_Book_Table(FirstName,SecondName,Address,City,State,zip,PhoneNumber,Email) 
-values('Harsha','Vargheese','645 Catherine Street','Bangalore','Karnataka',243001,9842905050,'harsha@gmail.com'),
-('Rujula','Mathialagan','836 Heritage Rd','Chennai','Tamil Nadu',134002,98402000,'Rujula@gmail.com'),
-('Anita','Yadav','19 Augusta Avenue','Lucknow','Uttar Pradesh',113201,87210505053,'anita@gmail.com');
+values('Arun','Kumar','T-Nagar','Chennai','TamilNadu',600068,1234567899,'arun@gmail.com'),
+('Vignesh','A','ramapuram','Chennai','TamilNadu',600066,2345678991,'vig123@gamil.com'),
+('Sam','M','CMBT','	Chennai','TamilNadu',600032,2345678911,'sam@gmail.com');
+
+-------------UC4---->edit existing contact person using person name----------
+
+update Address_Book_Table set PhoneNumber=7845712874 where FirstName='Sam';
+
+
