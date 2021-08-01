@@ -24,4 +24,9 @@ values('Arun','Kumar','T-Nagar','Chennai','TamilNadu',600068,1234567899,'arun@gm
 
 update Address_Book_Table set PhoneNumber=7845712874 where FirstName='Sam';
 
+--------UC5---->Delete a contact using perosn name-----
+
+delete from Address_Book_Table where FirstName='Sam' and SecondName='M';
+
+
 
