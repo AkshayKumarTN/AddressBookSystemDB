@@ -46,3 +46,7 @@ add AddressBookName varchar(50),RelationType varchar(50);
 update Address_Book_Table set AddressBookName='Friends',RelationType='Friend' where FirstName='Arun' ;
 
 update Address_Book_Table set AddressBookName ='Cousin',RelationType ='Family' where zip=600066;
+
+---------UC10---->Count of persons based on realtion type-----
+Select count(*)as CountType, RelationType  from Address_Book_Table group by RelationType;
+
