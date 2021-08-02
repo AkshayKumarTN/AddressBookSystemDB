@@ -32,3 +32,6 @@ delete from Address_Book_Table where FirstName='Sam' and SecondName='M';
 
 Select * from Address_Book_Table where City='Chennai' or State='TamilNadu';
 
+-----------UC7---->Count of state and city--------
+Select Count(*) As Count,State,City from Address_Book_Table group by State,City;
+
