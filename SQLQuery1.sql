@@ -46,3 +46,11 @@ add AddressBookName varchar(50),RelationType varchar(50);
 update Address_Book_Table set AddressBookName='Friends',RelationType='Friend' where FirstName='Arun' ;
 
 update Address_Book_Table set AddressBookName ='Cousin',RelationType ='Family' where zip=600066;
+
+---------UC10---->Count of persons based on realtion type-----
+Select count(*)as CountType, RelationType  from Address_Book_Table group by RelationType;
+
+----------UC11----->Insert into tables For each Type--------
+Insert into Address_Book_Table(FirstName,SecondName,Address,City,State,zip,PhoneNumber,Email,AddressBookName,RelationType) 
+values('Vijai','Kumar','T-Nagar','Bengaluru','Karnataka',620068,1234567809,'Vijai@gmail.com','Friends','Friend'),
+('Surya','A','KK-Nagar','Bengaluru','Karnataka',620066,2345678091,'Surya123@gamil.com','Cousin','Family');
