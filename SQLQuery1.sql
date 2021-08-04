@@ -121,3 +121,14 @@ Select * from AddressBookTable;
 Select * from Contact;
 Select * from Contact_Type;
 Select * From Contact_BookName;
+
+--------------------------UC13-Aggregate Function On Multiple Tables--------------------------
+
+SELECT * FROM contact INNER JOIN Contact_Type type 
+on contact.FirstName = type.FirstName;
+
+--Count Contact By Type
+select  type.RelationType,COUNT(contact.FirstName) as Total_Count
+FROM contact INNER JOIN contact_type type 
+ON contact.FirstName = type.FirstName
+GROUP BY type.RelationType;
